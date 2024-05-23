@@ -6,10 +6,16 @@ class EditNoteViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        CustomAppBar(),
-      ],
+    return const Padding(
+      padding: EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+      child: Column(
+        children: [
+          CustomAppBar(
+            title: "Edit Note",
+            icon: Icons.check,
+          ),
+        ],
+      ),
     );
   }
 }
