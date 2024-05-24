@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
 
 class CustomNoteButton extends StatelessWidget {
-  const CustomNoteButton({super.key});
+  const CustomNoteButton({super.key, required this.onPressed});
+
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: onPressed,
       color: kPrimaryColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8),
